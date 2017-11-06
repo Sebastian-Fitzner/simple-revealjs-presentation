@@ -324,6 +324,14 @@ When your project type is `single-page-app` you will get this file additionally.
 
 ![alt Input](assets/img/input.gif "Input")
 
+--
+
+#### Exercise 01: Scaffold a new project
+
+1. Goto folder /exercises/01-veams-cli-setup`
+1. Scaffold a new project and select jQuery as JS lib and Bourbon Neat as SCSS framework (use defaults for all other prompts)
+1. As soon as scaffolding process has finished start the project
+
 ---
 
 ## Veams-Cli - Components and Utilities
@@ -352,6 +360,16 @@ For details on available commands and short forms check Veams help in the termin
 ```bash
 veams -h
 ```
+
+--
+
+#### Exercise 02: Installing Veams components
+
+1. Goto folder `/exercises/02-veams-cli-components`
+1. Install the following components `c-video`, `c-picture` and `c-figure`
+1. Take a look at the components documentation pages linked on `http://localhost:3000/index.html`
+1. Take also a look at the components overview page at `http://localhost:3000/components.html`
+1. Take a look at the new component folders generated in `src/shared/components`
 
 ---
 
