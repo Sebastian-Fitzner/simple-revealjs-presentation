@@ -328,8 +328,10 @@ When your project type is `single-page-app` you will get this file additionally.
 
 #### Exercise 01: Scaffold a new project
 
-1. Goto folder /exercises/01-veams-cli-setup`
-1. Scaffold a new project and select jQuery as JS lib and Bourbon Neat as SCSS framework (use defaults for all other prompts)
+If not done yet - please checkout https://github.com/aperto-frontend/veams-workshop-2017.git first
+
+1. Goto folder `/exercises/01-veams-cli-setup`
+1. Scaffold a new project and select **jQuery** as JS lib and **Bourbon Neat** as SCSS framework (use defaults for all other prompts)
 1. As soon as scaffolding process has finished start the project
 
 ---
@@ -340,17 +342,19 @@ When your project type is `single-page-app` you will get this file additionally.
 
 ### Install process
 
-- All Veams components and utilities are published on NPM: https://www.npmjs.com/org/veams
-- Example page hosting all currently available components/utilities: http://examples.veams.org/
+- All Veams components and utilities are published on **npm**: https://www.npmjs.com/org/veams
+- **Example page** hosting all currently available components/utilities: http://examples.veams.org/
 
 --
 
 You can install existing Veams components and utilities like this:
 
+_Components_
 ```bash
 veams install veams-component slider
 ```
 
+ _Utilities_
 ```bash
 veams install veams-utility grid
 ```
