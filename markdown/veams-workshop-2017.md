@@ -72,7 +72,7 @@ We decided to go away from plugin based prompts and rewrote that stuff to subjec
 
 Furthermore we want to support project types as a new choice for you, means we can distinguish between:
  - static-page-app
- - single-page-app
+ - single-page-app (with React)
 
 --
 
@@ -82,7 +82,7 @@ Install veams-cli globally by executing `npm i -g veams-cli/@next`.
 
 --
 
-### Setup a project with Veams-Cli
+### Setup a Project with Veams-Cli
 
 Creating a new project is very simple. Make sure you already have created a testing folder like `my-custom-project`.
 
@@ -120,7 +120,7 @@ That's what the folder structure should look like after scaffolding a new projec
 
 #### Why did we refactor the whole project structure?
 
-We did this fro the sake of flexibility, scalability and decoupling.
+We did this for the sake of flexibility, scalability and decoupling.
 We do not support the old `standard` project setup anymore.
 
 --
@@ -240,7 +240,7 @@ The source folder is the major working directory. Let's take a deep dive into th
 
 **`core`** folder
 
-The `core` is responsible for the project specific setup. It contains components and states which define the base of the application.
+The `core` is responsible for the project specific setup. It contains layouts, components and states which define the base of the application.
 
 --
 
@@ -324,8 +324,6 @@ When your project type is `single-page-app` you will get this file additionally.
 
 ![alt Input](assets/img/input.gif "Input")
 
-
-
 ---
 
 ## Veams-Cli - Components and Utilities
@@ -354,6 +352,34 @@ For details on available commands and short forms check Veams help in the termin
 ```bash
 veams -h
 ```
+
+---
+
+## Veams-Cli - Blueprints
+
+One of the main features in our new `veams-cli` is the scaffolding part of blueprints.
+
+Here we re-wrote the generator from scratch to provide a solid and really flexible base.
+
+--
+
+### Main features in a nutshell
+
+- prompts can be easily extended by the developer
+- developers can write their own templates
+- installation of provided blueprint templates possible (currently in process)
+- custom types? no problem!
+
+Means, to scaffold blueprints is not limited to `Veams`.
+
+You can use it in react, angular, vue, veams or even non javascript projects.
+
+--
+
+### Example
+
+
+
 
 
 ---
