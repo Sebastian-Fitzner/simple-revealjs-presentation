@@ -397,76 +397,162 @@ You can use it in react, angular, vue, veams or even non javascript projects.
 ### Example
 
 
-
-
-
 ---
 
-## VeamsComponent
+## Veams Framework
+
+### SCSS
+
+### JS
+
+--
+
+### Plugins
+
+Veams comes with a handy plugin system, allowing you to easily to add, load and configure plugins to fit your needs.
+On the next slides we give you a short overview of the main plugins shipped Veams.
+
+--
+
+#### veams-plugin-dom
+
+The VeamsDOM plugin is simple plugin for which you need to pass a DOM handler like jQuery. For some other plugins VeamsDOM is a requirement.
+
+Github: https://github.com/Veams/veams-plugin-dom
+
+--
+
+#### veams-plugin-logger
+
+The VeamsLogger plugin disables `console` logs by default. You can provide parameters (`?devmode`) in the URL to show the logs in your console.
+Once enabled by parameter the devmode is persistent for the current session.
+
+If devmode is enabled the additional parameter `&logger` adds a sticky console output element on the bottom of the page.
+This could be useful for quick debugging on mobile devices.
+
+Github: https://github.com/Veams/veams-plugin-logger
+
+--
+
+#### veams-plugin-media-query-handler
+
+The VeamsMediaQueryHandler plugin provides to you a possibility to get the current media query name from your css.
+Media query name and the corresponding breakpoints are retrieved from `_get-media.scss`.
+
+Github: https://github.com/Veams/veams-plugin-media-query-handler
+
+--
+
+#### veams-plugin-mixins
+
+The VeamsMixins plugin is something where you can save global mixins. Mixins are object with functions in it which can be used to extend methods in other classes/modules.
+
+The `imageLoader` mixin for example can be applied to any class (component) which needs to update its view after all images had been loaded.
+ 
+Github: https://github.com/Veams/veams-plugin-mixins
+
+--
+
+#### veams-plugin-modules
+
+The VeamsModules plugin provides a whole system to initialize, render, save and destroy your modules.
+It uses mutation observer to observe added and removed nodes and handles your components, as long as the component has the same API like the `VeamsComponent`.
+
+**!!!!! TODO: Put code snippets here !!!!!**
+
+Github: https://github.com/Veams/veams-plugin-modules
+
+--
+
+#### veams-plugin-store
+
+**!!!!! TODO: Add explanation and code snippets if necessary !!!!!**
+
+Github: https://github.com/Veams/veams-plugin-store
+
+--
+
+#### veams-plugin-templater
+
+This plugin adds the possibility to render your `handlebars` templates in an easy way. You can register the engine, templates, partials and helpers and use them directly in your other classes.
+
+Github: https://github.com/Veams/veams-plugin-templater
+
+--
+
+#### veams-plugin-vent
+
+The VeamsVent plugin is a global publish and subscribe object. You can use this plugin to communicate between modules independently.
+
+Github: https://github.com/Veams/veams-plugin-vent
+
+--
+
+### VeamsComponent
 
 `VeamsComponent` acts as base class for your custom components.
 
 --
 
-### Initial methods
+#### Initial methods
 
 --
 
-#### constructor(obj)
+##### constructor(obj)
 - default options are defined here
 - you have to call `super(obj, options)` to merge default with markup options
 
 --
 
-#### initialize()
+##### initialize()
 - called on init
 - useful for preparing your component
 
 --
 
-#### preRender()
+##### preRender()
 - if needed templates can be prerendered here using `renderTemplate` (see section "Render templates")
 
 --
 
-#### bindEvents()
+##### bindEvents()
 - bind events manually here using `registerEvent` (see section "Events / Manual binding")
 
 --
 
-#### render()
+##### render()
 - called as long as option `render` is not set to `false` in options of module loader
 - render your templates here or update the state of your component
 
 --
 
-### Lifecycle hooks
+#### Lifecycle hooks
 
 The VeamsComponent provides useful lifecycle hooks.
 
 --
 
-#### willMount()
+##### willMount()
 - executed after initialize
 
 --
 
-#### didMount()
+##### didMount()
 - executed after initial render
 
 --
 
-#### willUnmount()
+##### willUnmount()
 - executed **before** unregistering events
 
 --
 
-#### didUnmount()
+##### didUnmount()
 - executed **after** unregistering events
 
 --
 
-### Merging options
+#### Merging options
 - default options defined in constructor will be merged with markup options by calling `super(obj, options)` in constructor
 - markup options have higher priority and always overwrite default options properties of the same name
 
@@ -483,7 +569,7 @@ Example for overwriting default options with markup options:
 
 --
 
-### Subscribe
+#### Subscribe
 The `VeamsComponent` can subscribe to global events using the getter `subscribe`.
 Global events can be triggered with `Veams.Vent.trigger('eventName')`.
 
@@ -499,13 +585,13 @@ get subscribe() {
 
 --
 
-### Events
+#### Events
 
 Local events can be bound by using the getter `events`.
 
 --
 
-#### Example 1 (without event delegation)
+##### Example 1 (without event delegation)
 
 ``` js
 get events() {
@@ -519,7 +605,7 @@ In this case the event listener is bound to `this.el` and executed as soon as th
 
 --
 
-#### Example 2 (with event delegation)
+##### Example 2 (with event delegation)
 
 ``` js
 get events() {
@@ -531,10 +617,9 @@ get events() {
 
 In this case the event listener is also bound to `this.el` but only executed if element specified in option `specialBtn` is clicked.
 
-
 --
 
-### Manual event binding
+#### Manual event binding
 
 Sometimes you need to bind events conditionally. Using the provided `registerEvent` method is a comfortable way.
 
@@ -553,8 +638,7 @@ bindEvents() {
 
 --
 
-
-### Render templates
+#### Render templates
 
 Rendering templates with Veams is pretty easy. You only have to specify the names of templates you want to use in the options of your component and then make a call to the `renderTemplate` function, passing the template name and the data as parameters.
 
@@ -569,15 +653,16 @@ render() {
 }
 ```
 
-## Veams Framework
+--
 
-### SCSS
+### Roadmap
 
-### JS
+#### Decorators
 
-### Plugins
+#### Context props
 
-lorem ipsum
+---
 
+## Veams in practice
 
-
+### Mock API
