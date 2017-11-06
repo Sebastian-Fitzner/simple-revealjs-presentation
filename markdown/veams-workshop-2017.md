@@ -35,7 +35,7 @@ http://mangony.veams.org/
 ### (It is not about)
 #### Tasks Runner Configuration
 
-After scaffolding a project you as developer is responsible for re-configure your tasks.
+After scaffolding a project the developers are responsible for re-configuring the tasks.
 
 --
 
@@ -49,9 +49,9 @@ See https://www.npmjs.com/package/veams-cli for an overview.
 
 ### Veams with JS/SCSS
 
-To work with JavaScript and SCSS you have to use Veams as framework.
+To work with JavaScript and SCSS you have to use Veams.
 
-The current version is v5.xx and you can find the documentation under https://github.com/Veams/veams.
+The current version is v5.xx and you can find the documentation at https://github.com/Veams/veams.
 
 ---
 
@@ -62,7 +62,7 @@ The current version is v5.xx and you can find the documentation under https://gi
 ### Introduction
 
 In general we refactored the whole cli and generators in there.
-Currently we are working on make the package stable, that's why it is now in `alpha`.
+Currently we work on making the package stable, that's why it is now in `alpha` state.
 
 --
 
@@ -70,7 +70,7 @@ We decided to go away from plugin based prompts and rewrote that stuff to subjec
 
 --
 
-Furthermore we want to support project types as new choice for you, means we can distinguish between:
+Furthermore we want to support project types as a new choice for you, means we can distinguish between:
  - static-page-app
  - single-page-app
 
@@ -82,9 +82,9 @@ Install veams-cli globally by executing `npm i -g veams-cli/@next`.
 
 --
 
-### Setup a Project with Veams-Cli
+### Setup a project with Veams-Cli
 
-To create a new project is very simple. Make sure you have a testing folder created like `my-custom-project`.
+Creating a new project is very simple. Make sure you already have created a testing folder like `my-custom-project`.
 
 Just execute the following line in that folder:
 
@@ -96,7 +96,7 @@ veams new project
 
 ### Folder structure
 
-Let's see what you would get when you have scaffolded a new project ...
+That's what the folder structure should look like after scaffolding a new project ...
 
 ``` bash
  ├── app
@@ -118,9 +118,9 @@ Let's see what you would get when you have scaffolded a new project ...
 
 --
 
-#### Why do we refactored the whole project structure?
+#### Why did we refactor the whole project structure?
 
-It is because of flexibility, scalability and decoupling.
+We did this fro the sake of flexibility, scalability and decoupling.
 We do not support the old `standard` project setup anymore.
 
 --
@@ -139,10 +139,10 @@ In the root folder you can find the following files:
 └── ./yarn.lock
 ```
 
-Most of the files are pretty clear.
+Most of the files are pretty self-explaining.
 
-Very important is `veams-cli.json`.
-This is new in the upcoming version and contains all necessary options and overrides for:
+An important file is the `veams-cli.json`.
+This file is new in the upcoming version and contains all necessary options and overrides for:
 
 - veams-cli
 - task configuration
@@ -165,7 +165,7 @@ This is new in the upcoming version and contains all necessary options and overr
 │       └── app.bundle.js
 ```
 
-The `_dist` and `_output` folder is now `app`.
+Instead of the `_dist` and `_output` folders we now have the `app` folder.
 
 We killed `libs.js` and renamed the final outcome from `main` to `app`. That's it!
 
@@ -210,7 +210,7 @@ We killed `libs.js` and renamed the final outcome from `main` to `app`. That's i
 
 In previous versions we had a simple server file. But we decided to provide a full stack solution with the following features:
 - API support
-- file based CRUD system
+- file based CRUD (Create/Read/Update/Delete) system
 - proxy support
 - simple extending possible
 
@@ -234,7 +234,7 @@ In previous versions we had a simple server file. But we decided to provide a fu
     └── shared
 ```
 
-The source folder is the major working directory. Let's deep dive into that ...
+The source folder is the major working directory. Let's take a deep dive into that ...
 
 --
 
@@ -246,8 +246,8 @@ The `core` is responsible for the project specific setup. It contains components
 
 **`features`** folder
 
-The `features` folder contains all specific application features and are purely self-contained.
-Think of a complex module which you can almost write as simple standalone project.
+The `features` folder contains all specific application features which are purely self-contained.
+Think of a complex module which could also act as a simple standalone project.
 
 This folder will be mainly used in a  `single-page-app` type.
 
@@ -261,7 +261,7 @@ The `pages` folder contains all pages of the application - simple.
 
 **`shared`** folder
 
-In `shared` are - of course - files saved, which you want to share among the project. Think of
+The `shared` folder contains files, that you want to share all over the project. Think of
 - helper scripts (js, scss)
 - dumb components (for single page apps)
 - re-usage in different pages/features
@@ -296,13 +296,13 @@ We renamed `main.js` to `app.js`. This is the file where your modules get initia
 
 **`app.events.js`** file
 
-We renamed `events.js` to `app.events.js`. In this file you will save all global events.
+We renamed `events.js` to `app.events.js`. In this file you can save all global events.
 
 --
 
 **`app.veams.js`** file
 
-We renamed `app.js` to `app.veams.js`. In this file you configure veams and expose it to the other modules.
+We renamed `app.js` to `app.veams.js`. In this file you configure Veams and expose it to the other modules.
 
 --
 
@@ -334,12 +334,12 @@ When your project type is `single-page-app` you will get this file additionally.
 
 ### Install process
 
-- All Veams components and utilities published on NPM: https://www.npmjs.com/org/veams
+- All Veams components and utilities are published on NPM: https://www.npmjs.com/org/veams
 - Example page hosting all currently available components/utilities: http://examples.veams.org/
 
 --
 
-You can install existing veams components and utilities like this:
+You can install existing Veams components and utilities like this:
 
 ```bash
 veams install veams-component slider
