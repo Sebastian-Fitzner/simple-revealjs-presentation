@@ -1,4 +1,24 @@
-# Technical Documentation
+# Technical Documentation in Frontend
+
+--
+
+## Problems
+
+--
+
+### It's boring
+
+![alt Boring](assets/img/tired.gif "Boring")
+
+We all know that, because ...
+
+--
+
+### Real World Problems
+
+- It's time consuming
+- It costs rendering time
+- It needs to be synced with your live code 
 
 --
 
@@ -7,6 +27,7 @@
 - fully automated
 - no performance problems
 - easy to configure
+- full synchronisation
 
 --
 
@@ -16,7 +37,6 @@ Not quite ...
 
 ![alt Sad](assets/img/sad.gif "Sad")
 
-
 -- 
 
 ... but we are fairly close.
@@ -24,10 +44,6 @@ Not quite ...
 ![alt Happy](assets/img/happy.gif "happy")
 
 --
-
-## Demo Time
-
--- 
 
 ## How do we achieve this? 
 
@@ -61,9 +77,9 @@ Overall Assemble is pretty nice! We have:
 
 # How do we solve these problems?
 
-With the new kid on the block: 
-
 --
+
+## With the new kid on the block 
 
 <img width="400px" src="./assets/img/logo.svg" alt="Logo Mangony" />
 
@@ -74,10 +90,9 @@ _Think of Assemble ([grunt-assemble](https://github.com/assemble/grunt-assemble)
 ## What can you expect?
 
 1. Usage in Grunt, Gulp or standalone. 
-2. By using the provided development server ([express](https://github.com/expressjs/express)) every change is completed in no time, no matter how many pages you have in your project.
-3. Only changed pages get compiled. 
+2. Every change is completed in no time, no matter how many pages you have in your project.
 4. Creation of deep ids is possible for all types. 
-5. For every type (data, partials, layouts, pages) Mangony adds its own watcher ([chokidar](https://github.com/paulmillr/chokidar)).
+5. For every type Mangony adds its own watcher ([chokidar](https://github.com/paulmillr/chokidar)).
 6. [HJSON](https://github.com/laktak/hjson) is available.
 7. [Handlebars](https://github.com/wycats/handlebars.js/) version 4.x is integrated.
 8. Markdown pages with handlebars are supported.
@@ -85,7 +100,7 @@ _Think of Assemble ([grunt-assemble](https://github.com/assemble/grunt-assemble)
 
 --- 
 
-# Benefits for the coder?
+# Benefits for the developer?
 
 --
 
@@ -126,6 +141,7 @@ Internal caching and a development server boost the overall performance.
 
 - Denn's 
 - MometaHEXAL
+- Veams
 
 --
 
@@ -145,8 +161,16 @@ If you use layouts in YFM, `{{> body}}` needs to be replaced with `{{{yield}}}`.
 
 ## When can we use it? 
 
-Til friday there will be a documentation boilerplate which can be scaffolded. 
-
-The usage of a technical documentation is already possible. 
+NOW
 
 -- 
+
+## How? 
+
+Just install it with `npm i grunt-mangony`
+
+-- 
+
+## Questions?
+
+![alt Questions](assets/img/questions-bale.gif "Questions")
