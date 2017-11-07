@@ -678,9 +678,42 @@ Give it a try and create your own custom type. There is no real specification.
 
 ## Veams Framework
 
+The purpose of Veams is to individually build up a project based framework in a simple, fast, scalable and understandable way.
+
+--
+
+Long time ago we had `Veams-SCSS` and `Veams-JS`. But we decided to put these together as Framework and add more functionality to it.
+
+--
+
+The outcome is now a standalone package called `veams`.
+
+--
+
 ### SCSS
 
-### JS
+SCSS is located at `veams/src/scss`. From there you can import Animations, Resets, Defaults and more.
+
+A good documentation can be found here: https://www.veams.org/sass/docs/_output/index.html
+
+--
+
+### JavaScript Framework
+
+
+The core of Veams is nothing more than a simple JavaScript object (Veams). In general Veams comes with some empty and predefined objects and a basic API.
+
+https://github.com/Veams/veams#veams-core-api
+
+--
+
+The most important part of Veams is the following functionality:
+
+``` js
+Veams.use()
+```
+
+With that function you can initialize your own plugins to extend `Veams`.
 
 --
 
@@ -735,7 +768,70 @@ Github: https://github.com/Veams/veams-plugin-mixins
 The VeamsModules plugin provides a whole system to initialize, render, save and destroy your modules.
 It uses mutation observer to observe added and removed nodes and handles your components, as long as the component has the same API like the `VeamsComponent`.
 
-**!!!!! TODO: Put code snippets here !!!!!**
+This module is really helpful in a lot of things like conditional initialization, automatic initialization when the DOM gets updated and so on.
+
+--
+
+##### Initializing
+
+There are two ways to register modules with the plugin.
+
+**Array Handling**
+
+``` js
+
+Veams.modules.register([
+	{
+		namespace: 'accordion',
+		module: Accordion
+	},...
+]);
+```
+
+**Simple Handling**
+
+``` js
+Veams.modules.add('accordion', Accordion);
+```
+
+--
+
+##### Conditional Initialization
+
+You can easily initialize modules on conditions:
+
+``` js
+
+Veams.modules.register([
+	{
+		namespace: 'accordion',
+		module: Accordion,
+		conditions: () => Veams.detections.width > 700,
+		conditionsListenOn: [
+		    Veams.EVENTS.resize
+		]
+	},...
+]);
+```
+
+--
+
+##### Skip `render()`
+
+You want skip render? Here you go:
+
+``` js
+
+Veams.modules.register([
+	{
+		namespace: 'accordion',
+		module: Accordion,
+		render: false
+	},...
+]);
+```
+
+--
 
 Github: https://github.com/Veams/veams-plugin-modules
 
@@ -743,9 +839,16 @@ Github: https://github.com/Veams/veams-plugin-modules
 
 #### veams-plugin-store
 
-**!!!!! TODO: Add explanation and code snippets if necessary !!!!!**
+The store is relatively new, but it provides a simplified version of `redux`.
 
 Github: https://github.com/Veams/veams-plugin-store
+
+For more details you can also take a look at this presentation:
+
+https://showroom.aperto.de/projects/p/Presentations/store-observable-pattern/
+
+- User: 1860920541
+- Password: R8NBzzJkZIki4RN
 
 --
 
@@ -930,16 +1033,18 @@ render() {
 }
 ```
 
---
+---
 
 ### Roadmap
 
-#### Decorators
-
-#### Context props
+1. Clean Up
+1. Veams Decorators
+1. Context Properties
 
 ---
 
 ## Veams in practice
+
+--
 
 ### Mock API
