@@ -770,6 +770,8 @@ It uses mutation observer to observe added and removed nodes and handles your co
 
 This module is really helpful in a lot of things like conditional initialization, automatic initialization when the DOM gets updated and so on.
 
+Github: https://github.com/Veams/veams-plugin-modules
+
 --
 
 ##### Initializing
