@@ -958,7 +958,7 @@ Example for global event subscription:
 ``` js
 get subscribe() {
 	return {
-		'{{Veams.EVENTS.resize}}': 'resizeFunction'
+		'{{Veams.EVENTS.resize}}': 'onResize'
 	};
 }
 ```
