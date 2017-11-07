@@ -1007,12 +1007,18 @@ Example of manually registering local event in automatically called `bindEvents`
 
 ``` js
 bindEvents() {
+	...
 
-	// register global event
-	this.registerEvent('{{this.options.globalEvent}}', 'eventHandler', true);
-
-	// register local event with event delegation
-	this.registerEvent('{{Veams.EVENTS.keydown}} {{this.options.someSubComponent}}', 'onKeydown');
+	if (condition) {
+	
+		// register global event
+		this.registerEvent('{{this.options.globalEvent}}', 'eventHandler', true);
+	
+		// register local event with event delegation
+		this.registerEvent('{{Veams.EVENTS.keydown}} {{this.options.someSubComponent}}', 'onKeydown');
+	}
+	
+	...
 }
 ```
 
