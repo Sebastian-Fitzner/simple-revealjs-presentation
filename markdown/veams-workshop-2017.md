@@ -811,8 +811,8 @@ With that function you can initialize your own plugins to extend `Veams`.
 
 ### Plugins
 
-Veams comes with a handy plugin system, allowing you to easily to add, load and configure plugins to fit your needs.
-On the next slides we give you a short overview of the main plugins shipped Veams.
+Veams comes with a handy plugin system, allowing you to easily add, load and configure plugins to fit your needs.
+On the next slides we give you a short overview of the main plugins shipped with Veams.
 
 --
 
