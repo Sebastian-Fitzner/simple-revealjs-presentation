@@ -1163,6 +1163,18 @@ render() {
 }
 ```
 
+--
+
+### Scaffold a new component
+
+Let's take a look inside of a Javascript component by scaffolding a new component with
+
+``` bash
+veams add component whatever
+```
+
+Now the component can be found in `src/shared/components/whatever`
+
 ---
 
 ### Roadmap
