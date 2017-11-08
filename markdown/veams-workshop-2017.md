@@ -409,7 +409,8 @@ veams -h
 #### Exercise 02: Installing Veams components
 
 1. Goto folder `/exercises/02-veams-cli-components`
-1. Install the following components `c-video`, `c-picture` and `c-figure`
+1. Install all packages using `yarn install` or `npm install`
+1. Install the following Veams components `c-video`, `c-picture` and `c-figure`
 1. Take a look at the components documentation pages linked on `http://localhost:3000/index.html`
 1. Take also a look at the components overview page at `http://localhost:3000/components.html`
 1. Take a look at the new component folders generated in `src/shared/components`
