@@ -163,7 +163,7 @@ The file looks like that:
      "config": {
          "src": "configs/_grunt/*.js" // Config task files
      },
-     "importFiles": { // Files were references are created
+     "importFiles": { // Files where references are created
          "style": "src/app.scss",
          "script": "src/app.js"
      },
