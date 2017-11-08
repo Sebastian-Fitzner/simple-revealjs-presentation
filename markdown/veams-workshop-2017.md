@@ -2,6 +2,17 @@
 
 ---
 
+## Presentation online
+
+This presentation can be found at https://showroom.aperto.de/projects/p/Presentations/veams-workshop-2017
+
+You need credentials to get access:
+
+1. Login to https://showroom.aperto.de/ with your default Aperto credentials
+1. Search for "Presentations" and use corresponding KundenId and KundenPW
+
+---
+
 ## Sitemap
 
 1. What is the workshop (not) about?
