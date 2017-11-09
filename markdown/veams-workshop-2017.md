@@ -50,7 +50,7 @@ After scaffolding a project the developers are responsible for re-configuring th
 
 --
 
-### Veams-Cli and Scaffolding
+### Veams-Cli
 
 To scaffold a project or blueprints like components you can use `veams-cli`.
 
@@ -60,7 +60,7 @@ See https://www.npmjs.com/package/veams-cli for an overview.
 
 ### Veams
 
-To work with JavaScript and SCSS you have to use Veams.
+To work with JavaScript and SCSS you have to use `Veams`.
 
 The current version is v5.xx and you can find the documentation and package at https://github.com/Veams/veams.
 
@@ -89,7 +89,7 @@ Furthermore we want to support project types as a new choice for you, means we c
 
 ### Installation of Veams-Cli
 
-Install veams-cli globally by executing `npm i -g veams-cli/@next`.
+Install veams-cli globally by executing `npm i -g veams-cli@next`.
 
 --
 
@@ -1165,7 +1165,7 @@ render() {
 
 --
 
-### Scaffold a new component
+### Exercise: Scaffold a new component
 
 Let's take a look inside of a Javascript component by scaffolding a new component with
 
@@ -1173,27 +1173,72 @@ Let's take a look inside of a Javascript component by scaffolding a new componen
 veams add component whatever
 ```
 
-Now the component can be found in `src/shared/components/whatever`
+Now the component can be found in `src/shared/components/whatever`.
+
+Play around with the lifecycle hooks and `conditions`.
+
+--
+
+### What has changed?
+
+With the updated component blueprint we got now the following structure in `whatever`:
+
+``` bash
+.
+├── INSERTPOINTS.md
+├── README.md
+├── data
+│   └── whatever.json
+├── scripts
+│   └── whatever.js
+├── styles
+│   └── whatever.scss
+├── templates
+│   └── whatever.hbs
+└── whatever.settings.json
+
+```
+
+--
+
+1. No file prefixes anymore. But we think about an option if necessary.
+    - This does not mean, that we do not use the class methodology of Veams.
+1. YAML data is now saved in `whatever.settings.json`.
+    - That makes it easy for us to share the partial in frontend and backend rendering.
+1. New folder structure
+    - Perhaps we will add here an option to flatten the directory.
+
+--
+
+Furthermore we support JavaScript features like:
+
+- Class Properties
+- Decorators Support
 
 ---
 
 ### Roadmap
 
-1. Clean Up
-1. Veams Decorators
-1. Context Properties
+1. Clean Up/ Stable Release | 12/2017
+    - Context Property (Veams)
+    - Webpack Support (Veams-Cli)
+1. Veams Decorators (new package) | 1/2018
+1. TypeScript Support (Veams-Cli, Veams) | 3/2018
+1. Blueprint Templates (new packages) | ongoing
+    - API BP
+    - React Container BP
+    - React Component BP
+    - Veams Page BP
+    - NGRX Store BP
+1. Documentation | (12/2020)
 
 ---
 
-## Veams in practice
-
---
-
-### Mock API
+## Mock API
 
 With the new setup in place you have a mock api available where you can perform CRUD operations against it.
 
-Everything is saved at the file system.
+Everything is saved at the file system. We created that for `Globeswift` & `Connected Van` ...
 
 --
 
