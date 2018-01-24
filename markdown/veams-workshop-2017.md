@@ -1190,7 +1190,7 @@ Rendering templates with Veams is pretty easy. You only have to specify the name
 render() {
 
 	// render template with provided data
-	let tmpl = this.renderTemplate('btn', data);
+	let tmpl = this.renderTemplate('btn', this.data);
 
 	// append output to current element
 	this.$el.append(tmpl);
